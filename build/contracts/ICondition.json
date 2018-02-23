@@ -1,0 +1,353 @@
+{
+  "contractName": "ICondition",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_response",
+          "type": "address"
+        }
+      ],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "complete",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_minimumResponseOKCount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Condition",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "minimumResponseOKCount",
+      "outputs": [
+        {
+          "name": "count",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.17;\n\nimport './Response.sol';\n\ncontract ICondition {\n  function Condition(uint _minimumResponseOKCount) public;\n  function isComplete(Response _response) public view returns (bool complete);\n  function minimumResponseOKCount() public view returns (int count);\n}\n",
+  "sourcePath": "/Users/tanee/verde/blockchain/contracts/ICondition.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/tanee/verde/blockchain/contracts/ICondition.sol",
+      "exportedSymbols": {
+        "ICondition": [
+          110
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".17"
+          ]
+        },
+        "id": 91,
+        "name": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 697,
+          "absolutePath": "/Users/tanee/verde/blockchain/contracts/Response.sol",
+          "file": "./Response.sol",
+          "scope": 111,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 92,
+        "name": "ImportDirective",
+        "src": "26:24:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            110
+          ],
+          "name": "ICondition",
+          "scope": 111
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "Condition",
+              "payable": false,
+              "scope": 110,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_minimumResponseOKCount",
+                      "scope": 97,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 93,
+                        "name": "ElementaryTypeName",
+                        "src": "95:4:1"
+                      }
+                    ],
+                    "id": 94,
+                    "name": "VariableDeclaration",
+                    "src": "95:28:1"
+                  }
+                ],
+                "id": 95,
+                "name": "ParameterList",
+                "src": "94:30:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 96,
+                "name": "ParameterList",
+                "src": "131:0:1"
+              }
+            ],
+            "id": 97,
+            "name": "FunctionDefinition",
+            "src": "76:56:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": true,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "isComplete",
+              "payable": false,
+              "scope": 110,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_response",
+                      "scope": 104,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract Response",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Response",
+                          "referencedDeclaration": 696,
+                          "type": "contract Response"
+                        },
+                        "id": 98,
+                        "name": "UserDefinedTypeName",
+                        "src": "155:8:1"
+                      }
+                    ],
+                    "id": 99,
+                    "name": "VariableDeclaration",
+                    "src": "155:18:1"
+                  }
+                ],
+                "id": 100,
+                "name": "ParameterList",
+                "src": "154:20:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "complete",
+                      "scope": 104,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 101,
+                        "name": "ElementaryTypeName",
+                        "src": "196:4:1"
+                      }
+                    ],
+                    "id": 102,
+                    "name": "VariableDeclaration",
+                    "src": "196:13:1"
+                  }
+                ],
+                "id": 103,
+                "name": "ParameterList",
+                "src": "195:15:1"
+              }
+            ],
+            "id": 104,
+            "name": "FunctionDefinition",
+            "src": "135:76:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": true,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "minimumResponseOKCount",
+              "payable": false,
+              "scope": 110,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 105,
+                "name": "ParameterList",
+                "src": "245:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "count",
+                      "scope": 109,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 106,
+                        "name": "ElementaryTypeName",
+                        "src": "269:3:1"
+                      }
+                    ],
+                    "id": 107,
+                    "name": "VariableDeclaration",
+                    "src": "269:9:1"
+                  }
+                ],
+                "id": 108,
+                "name": "ParameterList",
+                "src": "268:11:1"
+              }
+            ],
+            "id": 109,
+            "name": "FunctionDefinition",
+            "src": "214:66:1"
+          }
+        ],
+        "id": 110,
+        "name": "ContractDefinition",
+        "src": "52:230:1"
+      }
+    ],
+    "id": 111,
+    "name": "SourceUnit",
+    "src": "0:283:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-31T06:56:47.185Z"
+}
