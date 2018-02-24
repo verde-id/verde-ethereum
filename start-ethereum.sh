@@ -42,18 +42,18 @@ write_config () {
   echo '  "partyAddress": ['
   while [ $i -lt 14 ]; do
     tmpArr=($(cat $tmpFile | sed "${i}q;d"))
-    echo "    ${tmpArr[1]},"
+    echo "    \"${tmpArr[1]}\","
     i=$(($i + 1))
   done
   tmpArr=($(cat $tmpFile | sed "${i}q;d"))
-  echo "    ${tmpArr[1]}"
+  echo "    \"${tmpArr[1]}\""
   echo '  ],'
 
   echo '  "contractAddress":  {'
   echo -n '    "request": '
-  echo $REQUESTS_CONTRACT_ADDR
+  echo "\"$REQUESTS_CONTRACT_ADDR\","
   echo -n '    "directory": '
-  echo $DIRECTORY_CONTRACT_ADDR
+  echo '"$DIRECTORY_CONTRACT_ADDR"'
   echo '  }'
 
   echo '}'
