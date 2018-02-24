@@ -53,7 +53,7 @@ write_config () {
   echo -n '    "request": '
   echo "\"$REQUESTS_CONTRACT_ADDR\","
   echo -n '    "directory": '
-  echo '"$DIRECTORY_CONTRACT_ADDR"'
+  echo "\"$DIRECTORY_CONTRACT_ADDR\""
   echo '  }'
 
   echo '}'
