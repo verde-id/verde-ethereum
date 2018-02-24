@@ -6,7 +6,8 @@
     "compile": "truffle compile",
     "didbus": "babel-node ./bin/didbus.js",
     "build": "./build.sh",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "start": "echo \"Please run run-all.sh\""
   },
   "repository": {
     "type": "git",
