@@ -7,7 +7,7 @@
     "didbus": "babel-node ./bin/didbus.js",
     "build": "./build.sh",
     "lint": "eslint ./",
-    "start": "echo \"Please run run-all.sh\""
+    "start": "node start-ethereum.js"
   },
   "repository": {
     "type": "git",
