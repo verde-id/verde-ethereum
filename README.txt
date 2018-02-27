@@ -5,7 +5,7 @@
   npm install -g ganache-cli
   truffle compile
 
-============================ Start for RP,IDP example =========================
+============================ Start Blockchain =========================
 
 npm start
 
