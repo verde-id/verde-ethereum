@@ -1,8 +1,15 @@
-Preparation
+============================ Preparation =========================
+
   npm install
   npm install -g truffle
   npm install -g ganache-cli
   truffle compile
+
+============================ Start for RP,IDP example =========================
+
+npm start
+
+============================ Command line usage =========================
 
 Start ganache-cli with option unlock
   ganache-cli --unlock 0,1,2,3,4
