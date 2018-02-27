@@ -21,6 +21,8 @@ else {
   'This time it will be',targetDir);
 } 
 
+targetDir += '/verde-config.json';
+
 var tmpFile = '/tmp/verde-ethereum.log';
 
 console.log('Log file for ganache is located at',tmpFile);
@@ -65,25 +67,17 @@ waitGanache = setInterval(function() {
       //grep contract address and write config file
       truffleOutput = truffleOutput.split('\n');
       truffleOutput.forEach(function(line) {
-        if(line.indexOf('Requests:') !== -1) contractAddress.request = line.split(' ')[3];
-        if(line.indexOf('UserDirectory:') !== -1) contractAddress.directory = line.split(' ')[3];
+        if(line.indexOf('Requests:') !== -1)
+          contractAddress.request = line.split(' ')[3];
+        if(line.indexOf('UserDirectory:') !== -1)
+          contractAddress.directory = line.split(' ')[3];
       });
-      fs.writeFileSync(targetDir + '/verde-config.json',JSON.stringify({
+      fs.writeFileSync(targetDir,JSON.stringify({
         partyAddress,contractAddress
       }));
-      console.log('Ethereum ready, config file write at',targetDir + '/verde-config.json');
+      console.log('Ethereum ready, config file write at',targetDir);
     });
 
   });
 
 },500);
-
-/*function(err,stdout,stderr) {
-  if(err) throw err;
-  if(stderr) throw stderr;
-
-  console.log(stdout)
-
-  fs.writeFileSync(targetDir + '/verde-config.json', JSON.stringify(config));
-  console.log('Ethereum ready, config file is at',targetDir + '/verde-config.json');
-}*/
