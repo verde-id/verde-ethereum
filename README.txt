@@ -1,7 +1,7 @@
 ============================ Preparation =========================
 
   npm install
-  npm install -g truffle
+  npm install -g truffle@4.0.5
   npm install -g ganache-cli
   truffle compile
 
