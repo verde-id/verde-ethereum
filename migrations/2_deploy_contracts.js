@@ -16,7 +16,7 @@ module.exports = function(deployer) {
   deployer.deploy(Request).then(() => {
     objJSON[Request.contractName] = Request.address;
   });
-  deployer.deploy(Condition).then(() => {
+  deployer.deploy(Condition,1).then(() => {
     objJSON[Condition.contractName] = Condition.address;
   });
   deployer.deploy(User).then(() => {
